@@ -12,22 +12,22 @@ int main() {
         return 1;
     }
 
-    // Possible characters for the password
+    
     char characters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         "abcdefghijklmnopqrstuvwxyz"
                         "0123456789"
                         "!@#$%^&*()_+-=[]{}|;:',.<>?/";
 
-    int charCount = sizeof(characters) - 1;  // exclude null terminator
-    char password[length + 1];  // +1 for null terminator
+    int charCount = sizeof(characters) - 1;  
+    char password[length + 1];  
 
-    srand(time(0)); // Seed the random number generator
+    srand(time(0)); 
 
     for (int i = 0; i < length; i++) {
-        int index = rand() % charCount;  // pick a random index
+        int index = rand() % charCount;  
         password[i] = characters[index];
     }
-    password[length] = '\0';  // terminate the string
+    password[length] = '\0';  
 
     printf("Generated Password: %s\n", password);
 
